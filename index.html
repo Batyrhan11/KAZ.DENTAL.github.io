@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaz Dental — стоматология в Астане, ул. Шаймерден Косшыгулулы, 10/2</title>
+<meta name="description" content="Kaz Dental: имплантация, протезирование, хирургия и эстетическая стоматология в Астане. Запись по телефону и в WhatsApp. Улица Шаймерден Косшыгулулы, 10/2.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+
+<!--
+  ЧТО ЗАПОЛНИТЬ ПЕРЕД ЗАПУСКОМ (см. также блок CONFIG в конце файла):
+  1. Телефон и номер WhatsApp — в источниках встречаются разные номера, выберите основной.
+  2. График работы — в источниках расходится (будни/суббота и «24/7»).
+  3. Название юрлица, БИН, номер лицензии — в блок .legal внизу страницы.
+  4. Фото клиники и врачей, цены — добавлять только реальные.
+-->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Kaz Dental",
+  "description": "Стоматология: имплантация, протезирование, хирургия, эстетическая стоматология.",
+  "telephone": "+7 747 888 5509",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "улица Шаймерден Косшыгулулы, 10/2",
+    "addressLocality": "Астана",
+    "addressCountry": "KZ"
+  }
+}
+</script>
+
+<style>
+:root{
+  --ink:#0c2a31;
+  --deep:#07484d;
+  --teal:#0f8b8d;
+  --enamel:#f4f8f7;
+  --line:#d5e3e1;
+  --sun:#ffc93c;
+  --white:#fff;
+  --muted:#4d6a70;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Montserrat,Inter,system-ui,sans-serif;line-height:1.12;letter-spacing:-.02em;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+.bar{display:flex;align-items:center;gap:16px;min-height:64px}
+.brand{font-family:Montserrat,sans-serif;font-weight:800;font-size:1.25rem;letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand svg{width:26px;height:26px;flex:none}
+.nav{display:none;gap:22px;margin-left:auto;font-weight:500;font-size:.95rem}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--ink)}
+.bar-actions{display:flex;align-items:center;gap:10px;margin-left:auto}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{border:0;background:transparent;font:inherit;font-size:.85rem;font-weight:600;padding:7px 12px;cursor:pointer;color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--white)}
+.tel{display:none;font-weight:600;text-decoration:none}
+@media (min-width:900px){
+  .nav{display:flex}
+  .bar-actions{margin-left:22px}
+  .tel{display:inline}
+}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:14px 24px;font:600 1rem Inter,sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.btn-primary{background:var(--deep);color:var(--white)}
+.btn-primary:hover{background:var(--ink)}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--ink);color:var(--white)}
+.btn-sun{background:var(--sun);color:var(--ink)}
+.btn-sun:hover{background:#ffd666}
+.btn-small{padding:9px 16px;font-size:.9rem}
+
+/* Hero */
+.hero{background:var(--enamel);padding:44px 0 56px}
+.hero-grid{display:grid;gap:32px}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);font-weight:800;max-width:15ch}
+.hero .lead{margin:18px 0 0;font-size:1.1rem;color:var(--muted);max-width:46ch}
+.hero .addr{margin:22px 0 0;display:flex;gap:10px;align-items:flex-start;font-weight:500}
+.hero .addr svg{width:20px;height:20px;flex:none;margin-top:3px;color:var(--teal)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+.triage{background:var(--deep);color:var(--white);border-radius:22px;padding:26px 22px}
+.triage h2{font-size:1.4rem;font-weight:700}
+.triage p{margin:8px 0 18px;color:#bfe0de;font-size:.95rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px;padding:0;border:0}
+.chips legend{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.chip span{display:inline-block;padding:10px 16px;border-radius:999px;border:1.5px solid rgba(255,255,255,.4);font-weight:500;font-size:.95rem;transition:background .15s,color .15s,border-color .15s}
+.chip input:checked + span{background:var(--sun);color:var(--ink);border-color:var(--sun);font-weight:600}
+.chip input:focus-visible + span{outline:3px solid var(--white);outline-offset:2px}
+.triage .btn{width:100%}
+.triage .alt{display:block;text-align:center;margin-top:14px;color:#bfe0de;font-size:.95rem}
+@media (min-width:900px){
+  .hero{padding:72px 0 84px}
+  .hero-grid{grid-template-columns:1.15fr .85fr;align-items:center;gap:56px}
+  .triage{padding:34px 30px}
+}
+
+/* Sections */
+section{padding:64px 0}
+.section-head{max-width:640px;margin-bottom:34px}
+.section-head h2{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:800}
+.section-head p{margin:12px 0 0;color:var(--muted)}
+
+/* Services: rows, not cards */
+.services{border-top:1px solid var(--line)}
+.service{display:grid;gap:10px;padding:24px 0;border-bottom:1px solid var(--line);align-items:center}
+.service h3{font-size:1.3rem;font-weight:700}
+.service p{margin:0;color:var(--muted);max-width:52ch}
+.service a{font-weight:600;color:var(--teal);text-underline-offset:4px}
+@media (min-width:760px){
+  .service{grid-template-columns:1fr 1.2fr auto;gap:32px}
+}
+
+/* Visit steps */
+.visit{background:var(--enamel)}
+.steps{list-style:none;margin:0;padding:0;counter-reset:step;display:grid;gap:0;border-left:3px solid var(--teal)}
+.steps li{counter-increment:step;padding:6px 0 26px 26px;position:relative}
+.steps li::before{content:counter(step);position:absolute;left:-17px;top:0;width:31px;height:31px;border-radius:50%;background:var(--teal);color:var(--white);font:700 .9rem Montserrat,sans-serif;display:grid;place-items:center}
+.steps h3{font-size:1.1rem;font-weight:700}
+.steps p{margin:4px 0 0;color:var(--muted);max-width:50ch}
+.steps li:last-child{padding-bottom:0}
+.note{margin-top:26px;font-size:.92rem;color:var(--muted)}
+
+/* Reviews */
+.rating{display:grid;gap:20px;align-items:center;background:var(--ink);color:var(--white);border-radius:22px;padding:30px 24px}
+.rating .score{font:800 3.4rem Montserrat,sans-serif;line-height:1}
+.rating .score small{font-size:1.1rem;font-weight:600;color:#9fc7c5;margin-left:6px}
+.rating p{margin:6px 0 0;color:#cfe5e3}
+@media (min-width:760px){
+  .rating{grid-template-columns:auto 1fr auto;gap:36px;padding:34px 40px}
+}
+
+/* FAQ */
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq details:first-of-type{border-top:1px solid var(--line)}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--teal);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:12px 0 0;color:var(--muted);max-width:62ch}
+
+/* Contacts */
+.contacts{background:var(--enamel)}
+.contact-grid{display:grid;gap:30px}
+.contact-list{display:grid;gap:18px;margin:0;padding:0;list-style:none}
+.contact-list b{display:block;font-size:.85rem;color:var(--muted);font-weight:600;margin-bottom:2px}
+.contact-list a{font-weight:600;text-decoration:none;font-size:1.15rem}
+.contact-list .plain{font-weight:600;font-size:1.15rem}
+.map-card{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:14px;justify-content:center}
+.map-card h3{font-size:1.3rem}
+.map-card p{margin:0;color:var(--muted)}
+@media (min-width:900px){
+  .contact-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:stretch}
+}
+
+/* Footer */
+footer{padding:34px 0 110px;font-size:.9rem;color:var(--muted)}
+footer .legal{margin:8px 0 0}
+@media (min-width:900px){footer{padding-bottom:40px}}
+
+/* Mobile sticky actions */
+.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line)}
+.mobile-bar .btn{padding:13px 10px}
+@media (min-width:900px){.mobile-bar{display:none}}
+</style>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Kaz Dental">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 5.5c-2-1.8-4.6-2.4-7-1.6-3 1-4.4 4.4-3.7 8 .5 2.7 1.8 4.3 2.6 7 .7 2.4.9 6.3 2.5 8.1 1.2 1.3 2.6.4 3.1-1.5.6-2.3.9-4.6 2.5-4.6s1.9 2.3 2.5 4.6c.5 1.9 1.9 2.8 3.1 1.5 1.6-1.8 1.8-5.7 2.5-8.1.8-2.7 2.100-4.300 2.600-7 .7-3.600-.7-7-3.700-8-2.400-.8-5 .1-7 1.600z" stroke="#0f8b8d" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span>Kaz Dental</span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#services" data-i18n="nav_services">Услуги</a>
+      <a href="#visit" data-i18n="nav_visit">Первый визит</a>
+      <a href="#reviews" data-i18n="nav_reviews">Отзывы</a>
+      <a href="#faq" data-i18n="nav_faq">Вопросы</a>
+      <a href="#contacts" data-i18n="nav_contacts">Контакты</a>
+    </nav>
+    <div class="bar-actions">
+      <div class="lang" role="group" aria-label="Язык / Тіл">
+        <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+        <button type="button" data-lang="kk" aria-pressed="false">ҚАЗ</button>
+      </div>
+      <a class="tel" data-tel href="tel:+77478885509">+7 747 888 5509</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1 data-i18n="h1">Стоматология Kaz Dental на Косшыгулулы</h1>
+        <p class="lead" data-i18n="lead">Имплантация, протезирование, хирургия и эстетическая стоматология в Астане.</p>
+        <p class="addr">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.500C19 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg>
+          <span data-i18n="addr">Улица Шаймерден Косшыгулулы, 10/2, Астана</span>
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" data-wa href="#" data-i18n="cta_wa">Записаться в WhatsApp</a>
+          <a class="btn btn-ghost" data-tel href="tel:+77478885509" data-i18n="cta_call">Позвонить</a>
+        </div>
+      </div>
+
+      <form class="triage" id="triage" aria-labelledby="triage-title" onsubmit="return false">
+        <h2 id="triage-title" data-i18n="triage_title">Что вас беспокоит?</h2>
+        <p data-i18n="triage_text">Выберите, и мы подготовим сообщение в WhatsApp. Администратор подберёт время.</p>
+        <fieldset class="chips">
+          <legend data-i18n="triage_title">Что вас беспокоит?</legend>
+          <label class="chip"><input type="radio" name="topic" value="pain" checked><span data-i18n="t_pain">Болит зуб</span></label>
+          <label class="chip"><input type="radio" name="topic" value="implant"><span data-i18n="t_implant">Нужен имплант</span></label>
+          <label class="chip"><input type="radio" name="topic" value="prosthetics"><span data-i18n="t_prosthetics">Коронка или протез</span></label>
+          <label class="chip"><input type="radio" name="topic" value="surgery"><span data-i18n="t_surgery">Удалить зуб</span></label>
+          <label class="chip"><input type="radio" name="topic" value="aesthetic"><span data-i18n="t_aesthetic">Хочу ровную улыбку</span></label>
+          <label class="chip"><input type="radio" name="topic" value="checkup"><span data-i18n="t_checkup">Просто осмотр</span></label>
+        </fieldset>
+        <a class="btn btn-sun" id="triage-wa" data-wa href="#" data-i18n="cta_wa">Записаться в WhatsApp</a>
+        <a class="alt" data-tel href="tel:+77478885509" data-i18n="alt_call">Или позвоните нам</a>
+      </form>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="services_title">Чем мы занимаемся</h2>
+        <p data-i18n="services_text">Состав услуг и стоимость уточняйте у администратора перед визитом.</p>
+      </div>
+      <div class="services">
+        <div class="service">
+          <h3 data-i18n="s1_t">Имплантация</h3>
+          <p data-i18n="s1_d">Восстановление утраченных зубов с опорой на имплант.</p>
+          <a data-wa data-topic="implant" href="#" data-i18n="ask">Спросить в WhatsApp</a>
+        </div>
+        <div class="service">
+          <h3 data-i18n="s2_t">Протезирование</h3>
+          <p data-i18n="s2_d">Коронки, мосты и съёмные протезы.</p>
+          <a data-wa data-topic="prosthetics" href="#" data-i18n="ask">Спросить в WhatsApp</a>
+        </div>
+        <div class="service">
+          <h3 data-i18n="s3_t">Хирургия</h3>
+          <p data-i18n="s3_d">Удаление зубов и хирургическое лечение.</p>
+          <a data-wa data-topic="surgery" href="#" data-i18n="ask">Спросить в WhatsApp</a>
+        </div>
+        <div class="service">
+          <h3 data-i18n="s4_t">Эстетическая стоматология</h3>
+          <p data-i18n="s4_d">Работа над формой и цветом зубов.</p>
+          <a data-wa data-topic="aesthetic" href="#" data-i18n="ask">Спросить в WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- First visit: a real sequence -->
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="visit_title">Как проходит первый визит</h2>
+      </div>
+      <ol class="steps">
+        <li><h3 data-i18n="v1_t">Осмотр и консультация</h3><p data-i18n="v1_d">Врач осматривает зубы и выслушивает, что вас беспокоит.</p></li>
+        <li><h3 data-i18n="v2_t">План лечения</h3><p data-i18n="v2_d">Вам объясняют, какие варианты лечения возможны.</p></li>
+        <li><h3 data-i18n="v3_t">Согласование стоимости</h3><p data-i18n="v3_d">Стоимость обсуждается до начала лечения.</p></li>
+        <li><h3 data-i18n="v4_t">Лечение</h3><p data-i18n="v4_d">Лечение начинается после вашего согласия.</p></li>
+      </ol>
+      <!-- Проверьте с клиникой, что порядок соответствует реальному -->
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="rev_title">Что говорят пациенты</h2>
+      </div>
+      <div class="rating">
+        <div class="score">4.8<small>/ 5</small></div>
+        <div>
+          <strong data-i18n="rev_strong">Рейтинг клиники в 2ГИС</strong>
+          <p data-i18n="rev_text">Более 500 оценок от пациентов. Рейтинг может меняться, актуальные отзывы смотрите по ссылке.</p>
+        </div>
+        <a class="btn btn-sun" href="https://2gis.kz/astana/search/Kaz%20Dental" target="_blank" rel="noopener" data-i18n="rev_btn">Читать отзывы в 2ГИС</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="faq_title">Частые вопросы</h2>
+      </div>
+      <details>
+        <summary data-i18n="q1">Нужно ли записываться заранее?</summary>
+        <p data-i18n="a1">Лучше записаться заранее: напишите в WhatsApp или позвоните, и администратор подберёт время.</p>
+      </details>
+      <details>
+        <summary data-i18n="q2">Можно ли узнать стоимость до визита?</summary>
+        <p data-i18n="a2">Напишите нам в WhatsApp, администратор подскажет по стоимости и объяснит, от чего она зависит.</p>
+      </details>
+      <details>
+        <summary data-i18n="q3">Как до вас добраться?</summary>
+        <p data-i18n="a3">Мы находимся на правом берегу, по адресу: улица Шаймерден Косшыгулулы, 10/2. Маршрут можно построить в 2ГИС по кнопке в разделе «Контакты».</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section id="contacts" class="contacts">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="section-head"><h2 data-i18n="c_title">Контакты</h2></div>
+        <ul class="contact-list">
+          <li><b data-i18n="c_addr_l">Адрес</b><span class="plain" data-i18n="addr">Улица Шаймерден Косшыгулулы, 10/2, Астана</span></li>
+          <li><b data-i18n="c_phone_l">Телефон</b><a data-tel href="tel:+77478885509">+7 747 888 5509</a></li>
+          <li><b>WhatsApp</b><a data-wa href="#" data-i18n="c_wa">Написать в WhatsApp</a></li>
+          <li><b data-i18n="c_hours_l">Часы работы</b><span class="plain" data-hours>Пн–Пт 09:00–19:00, Сб 10:00–18:00</span></li>
+        </ul>
+      </div>
+      <div class="map-card">
+        <h3 data-i18n="map_title">Как нас найти</h3>
+        <p data-i18n="map_text">Откройте клинику на карте 2ГИС и постройте маршрут от вашего местоположения.</p>
+        <a class="btn btn-primary" href="https://2gis.kz/astana/search/Kaz%20Dental" target="_blank" rel="noopener" data-i18n="map_btn">Открыть в 2ГИС</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year"></span> Kaz Dental</div>
+    <!-- Заполните и уберите атрибут hidden: ТОО «…», БИН …, лицензия № … -->
+    <p class="legal" hidden></p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="btn btn-ghost" data-tel href="tel:+77478885509" data-i18n="cta_call">Позвонить</a>
+  <a class="btn btn-primary" data-wa href="#" data-i18n="wa_short">WhatsApp</a>
+</div>
+
+<script>
+/* ===== CONFIG: заполните реальными данными клиники ===== */
+const CONFIG = {
+  phoneDisplay: "+7 747 888 5509",     // телефон для показа
+  phoneTel: "+77478885509",            // для ссылки tel:
+  whatsapp: "77478885509",             // только цифры, с кодом страны
+  hours: {
+    ru: "Пн–Пт 09:00–19:00, Сб 10:00–18:00",
+    kk: "Дс–Жм 09:00–19:00, Сб 10:00–18:00"
+  }
+};
+
+const DICT = {
+  ru: {
+    nav_services:"Услуги", nav_visit:"Первый визит", nav_reviews:"Отзывы", nav_faq:"Вопросы", nav_contacts:"Контакты",
+    h1:"Стоматология Kaz Dental на Косшыгулулы",
+    lead:"Имплантация, протезирование, хирургия и эстетическая стоматология в Астане.",
+    addr:"Улица Шаймерден Косшыгулулы, 10/2, Астана",
+    cta_wa:"Записаться в WhatsApp", cta_call:"Позвонить", alt_call:"Или позвоните нам", wa_short:"WhatsApp",
+    triage_title:"Что вас беспокоит?",
+    triage_text:"Выберите, и мы подготовим сообщение в WhatsApp. Администратор подберёт время.",
+    t_pain:"Болит зуб", t_implant:"Нужен имплант", t_prosthetics:"Коронка или протез",
+    t_surgery:"Удалить зуб", t_aesthetic:"Хочу ровную улыбку", t_checkup:"Просто осмотр",
+    services_title:"Чем мы занимаемся",
+    services_text:"Состав услуг и стоимость уточняйте у администратора перед визитом.",
+    s1_t:"Имплантация", s1_d:"Восстановление утраченных зубов с опорой на имплант.",
+    s2_t:"Протезирование", s2_d:"Коронки, мосты и съёмные протезы.",
+    s3_t:"Хирургия", s3_d:"Удаление зубов и хирургическое лечение.",
+    s4_t:"Эстетическая стоматология", s4_d:"Работа над формой и цветом зубов.",
+    ask:"Спросить в WhatsApp",
+    visit_title:"Как проходит первый визит",
+    v1_t:"Осмотр и консультация", v1_d:"Врач осматривает зубы и выслушивает, что вас беспокоит.",
+    v2_t:"План лечения", v2_d:"Вам объясняют, какие варианты лечения возможны.",
+    v3_t:"Согласование стоимости", v3_d:"Стоимость обсуждается до начала лечения.",
+    v4_t:"Лечение", v4_d:"Лечение начинается после вашего согласия.",
+    rev_title:"Что говорят пациенты", rev_strong:"Рейтинг клиники в 2ГИС",
+    rev_text:"Более 500 оценок от пациентов. Рейтинг может меняться, актуальные отзывы смотрите по ссылке.",
+    rev_btn:"Читать отзывы в 2ГИС",
+    faq_title:"Частые вопросы",
+    q1:"Нужно ли записываться заранее?",
+    a1:"Лучше записаться заранее: напишите в WhatsApp или позвоните, и администратор подберёт время.",
+    q2:"Можно ли узнать стоимость до визита?",
+    a2:"Напишите нам в WhatsApp, администратор подскажет по стоимости и объяснит, от чего она зависит.",
+    q3:"Как до вас добраться?",
+    a3:"Мы находимся на правом берегу, по адресу: улица Шаймерден Косшыгулулы, 10/2. Маршрут можно построить в 2ГИС по кнопке в разделе «Контакты».",
+    c_title:"Контакты", c_addr_l:"Адрес", c_phone_l:"Телефон", c_hours_l:"Часы работы", c_wa:"Написать в WhatsApp",
+    map_title:"Как нас найти",
+    map_text:"Откройте клинику на карте 2ГИС и постройте маршрут от вашего местоположения.",
+    map_btn:"Открыть в 2ГИС",
+    wa_msg:{
+      pain:"Здравствуйте! У меня болит зуб, хочу записаться на приём.",
+      implant:"Здравствуйте! Интересует имплантация, хочу записаться на консультацию.",
+      prosthetics:"Здравствуйте! Интересует коронка или протез, хочу записаться на консультацию.",
+      surgery:"Здравствуйте! Мне нужно удалить зуб, хочу записаться на приём.",
+      aesthetic:"Здравствуйте! Интересует эстетическая стоматология, хочу записаться на консультацию.",
+      checkup:"Здравствуйте! Хочу записаться на осмотр."
+    }
+  },
+  kk: {
+    nav_services:"Қызметтер", nav_visit:"Алғашқы қабылдау", nav_reviews:"Пікірлер", nav_faq:"Сұрақтар", nav_contacts:"Байланыс",
+    h1:"Қосшығұлұлы көшесіндегі Kaz Dental стоматологиясы",
+    lead:"Астанада имплантация, протездеу, хирургия және эстетикалық стоматология.",
+    addr:"Шәймерден Қосшығұлұлы көшесі, 10/2, Астана",
+    cta_wa:"WhatsApp арқылы жазылу", cta_call:"Қоңырау шалу", alt_call:"Немесе бізге қоңырау шалыңыз", wa_short:"WhatsApp",
+    triage_title:"Сізді не мазалайды?",
+    triage_text:"Таңдаңыз, біз WhatsApp-қа хабарлама дайындаймыз. Әкімші уақытты таңдауға көмектеседі.",
+    t_pain:"Тіс ауырады", t_implant:"Имплант керек", t_prosthetics:"Тәж немесе протез",
+    t_surgery:"Тісті жұлдыру", t_aesthetic:"Әдемі күлкі керек", t_checkup:"Жай тексеру",
+    services_title:"Біз не істейміз",
+    services_text:"Қызметтердің құрамы мен бағасын қабылдауға дейін әкімшіден нақтылаңыз.",
+    s1_t:"Имплантация", s1_d:"Жоғалған тістерді имплантқа сүйеніп қалпына келтіру.",
+    s2_t:"Протездеу", s2_d:"Тәждер, көпірлер және алмалы протездер.",
+    s3_t:"Хирургия", s3_d:"Тістерді жұлу және хирургиялық емдеу.",
+    s4_t:"Эстетикалық стоматология", s4_d:"Тістің пішіні мен түсін жақсарту.",
+    ask:"WhatsApp-та сұрау",
+    visit_title:"Алғашқы қабылдау қалай өтеді",
+    v1_t:"Тексеру және кеңес", v1_d:"Дәрігер тістеріңізді қарап, сізді не мазалайтынын тыңдайды.",
+    v2_t:"Емдеу жоспары", v2_d:"Емдеудің қандай нұсқалары бар екені түсіндіріледі.",
+    v3_t:"Құнын келісу", v3_d:"Емдеу басталғанға дейін құны талқыланады.",
+    v4_t:"Емдеу", v4_d:"Емдеу сіздің келісіміңізден кейін басталады.",
+    rev_title:"Пациенттер не дейді", rev_strong:"Клиниканың 2ГИС-тегі рейтингі",
+    rev_text:"Пациенттердің 500-ден астам бағасы. Рейтинг өзгеруі мүмкін, өзекті пікірлерді сілтемеден қараңыз.",
+    rev_btn:"2ГИС-те пікірлерді оқу",
+    faq_title:"Жиі қойылатын сұрақтар",
+    q1:"Алдын ала жазылу керек пе?",
+    a1:"Алдын ала жазылған дұрыс: WhatsApp-қа жазыңыз немесе қоңырау шалыңыз, әкімші уақытты таңдайды.",
+    q2:"Қабылдауға дейін бағасын білуге бола ма?",
+    a2:"WhatsApp-қа жазыңыз, әкімші баға туралы айтып, оның неге байланысты екенін түсіндіреді.",
+    q3:"Сізге қалай жетуге болады?",
+    a3:"Біз оң жағалауда орналасқанбыз: Шәймерден Қосшығұлұлы көшесі, 10/2. Маршрутты «Байланыс» бөліміндегі түйме арқылы 2ГИС-те құруға болады.",
+    c_title:"Байланыс", c_addr_l:"Мекенжай", c_phone_l:"Телефон", c_hours_l:"Жұмыс уақыты", c_wa:"WhatsApp-қа жазу",
+    map_title:"Бізді қалай табуға болады",
+    map_text:"Клиниканы 2ГИС картасында ашып, өз орныңыздан маршрут құрыңыз.",
+    map_btn:"2ГИС-те ашу",
+    wa_msg:{
+      pain:"Сәлеметсіз бе! Тісім ауырады, қабылдауға жазылғым келеді.",
+      implant:"Сәлеметсіз бе! Имплантация қызықтырады, кеңеске жазылғым келеді.",
+      prosthetics:"Сәлеметсіз бе! Тәж немесе протез қызықтырады, кеңеске жазылғым келеді.",
+      surgery:"Сәлеметсіз бе! Тісті жұлдыру керек, қабылдауға жазылғым келеді.",
+      aesthetic:"Сәлеметсіз бе! Эстетикалық стоматология қызықтырады, кеңеске жазылғым келеді.",
+      checkup:"Сәлеметсіз бе! Тексеруге жазылғым келеді."
+    }
+  }
+};
+
+let lang = "ru";
+try { const s = localStorage.getItem("kd-lang"); if (s === "kk" || s === "ru") lang = s; } catch(e){}
+
+function selectedTopic(){
+  const r = document.querySelector('input[name="topic"]:checked');
+  return r ? r.value : "checkup";
+}
+function waLink(topic){
+  return "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(DICT[lang].wa_msg[topic]);
+}
+function refreshLinks(){
+  document.querySelectorAll("[data-wa]").forEach(a=>{
+    const topic = a.dataset.topic || (a.id === "triage-wa" ? selectedTopic() : "checkup");
+    a.href = waLink(topic);
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  document.querySelectorAll("[data-tel]").forEach(a=>{
+    a.href = "tel:" + CONFIG.phoneTel;
+    if (a.classList.contains("tel") || a.closest(".contact-list")) a.textContent = CONFIG.phoneDisplay;
+  });
+  const h = document.querySelector("[data-hours]");
+  if (h) h.textContent = CONFIG.hours[lang];
+}
+function applyLang(){
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const v = DICT[lang][el.dataset.i18n];
+    if (v) el.textContent = v;
+  });
+  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+  refreshLinks();
+}
+document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>{
+  lang = b.dataset.lang;
+  try { localStorage.setItem("kd-lang", lang); } catch(e){}
+  applyLang();
+}));
+document.querySelectorAll('input[name="topic"]').forEach(i=>i.addEventListener("change", refreshLinks));
+document.getElementById("year").textContent = new Date().getFullYear();
+applyLang();
+</script>
+</body>
+</html>
